@@ -19,5 +19,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   direction: rtl;
+  font-size: 14px;
   text-align: right;
 }

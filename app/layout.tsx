@@ -15,26 +15,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="min-h-screen">
+        <header className="bg-gray-200 h-16 sticky top-0">
+
+        </header>
+
+        <main className="min-h-[calc(100dvh-8rem)]">
           {children}
         </main>
 
-        <footer className="bg-gray-100 sticky bottom-0">
+        <footer className="bg-white border-t sticky bottom-0">
           <nav className="grid grid-cols-5 gap-2 text-center">
-          <a className="p-4">
-              <span className="bg-gray-400 h-6 w-6 block rounded-full mx-auto">&nbsp;</span>
+            <a className="px-0 py-4">
+              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
             </a>
-            <a className="p-4">
-              <span className="bg-gray-400 h-6 w-6 block rounded-full mx-auto">&nbsp;</span>
+            <a className="px-0 py-4">
+              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
             </a>
-            <a className="p-4">
-              <span className="bg-gray-400 h-6 w-6 block rounded-full mx-auto">&nbsp;</span>
+            <a className="px-0 py-4">
+              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
             </a>
-            <a className="p-4">
-              <span className="bg-gray-400 h-6 w-6 block rounded-full mx-auto">&nbsp;</span>
+            <a className="px-0 py-4">
+              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
             </a>
-            <a className="p-4">
-              <span className="bg-gray-400 h-6 w-6 block rounded-full mx-auto">&nbsp;</span>
+            <a className="px-0 py-4">
+              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
             </a>
           </nav>
         </footer>

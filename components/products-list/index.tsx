@@ -1,3 +1,4 @@
+import Link from "next/link"
 import ProductType from "@/wp/product/types"
 
 type Props = {
@@ -12,7 +13,7 @@ export default function ProductsList(props: Props) {
       {products.map(product => {
         const cover = product.images?.[0];
         return (
-          <div className="border-b odd:border-l p-4 text-center">
+          <Link href={`/buy/${product.slug}/price/${product.altSlug}`} className="border-b odd:border-l p-4 text-center">
             <img
               alt={cover.alt}
               className="block w-full p-2 mb-4"
@@ -24,7 +25,7 @@ export default function ProductsList(props: Props) {
               className="mt-2 text-violet-400"
               dangerouslySetInnerHTML={{ __html: product.priceHtml }}
             />
-          </div>
+          </Link>
         )
       })}
     </div>

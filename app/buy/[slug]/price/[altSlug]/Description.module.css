@@ -1,0 +1,62 @@
+.wrapper {
+  @apply bg-white p-8 rounded-xl;
+}
+
+.heading {
+  @apply mb-8 text-xl;
+}
+
+.heading span {
+}
+
+.heading small {
+  @apply block leading-4 text-gray-400;
+}
+
+.content {}
+
+.content p {
+  @apply my-4;
+}
+
+.content img {
+  @apply bg-gray-100 block mx-auto my-6 rounded-xl;
+  height: auto !important;
+  max-width: 100%;
+  width: auto !important;
+}
+
+.content :global(.wp-caption) {
+  @apply mx-auto my-4 px-0 py-2 text-center;
+  max-width: 100% !important;
+  width: auto !important;
+}
+
+.content :global(.wp-caption) a {
+  @apply inline-block;
+}
+
+.content :global(.wp-caption) img {
+  @apply block mx-auto my-0;
+  display: block;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.content :global(.wp-caption .wp-caption-text) {
+  @apply m-0 text-xs;
+}
+
+.content table:global(.simple) {
+  @apply border border-gray-400 mx-0 my-6;
+}
+
+.content table:global(.simple) tr td,
+.content table:global(.simple) tr th {
+  @apply align-middle border border-gray-400 p-1;
+  direction: ltr;
+}
+
+.content table:global(.simple) tr:hover td {
+  @apply bg-gray-100;
+}

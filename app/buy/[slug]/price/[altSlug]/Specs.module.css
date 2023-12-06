@@ -1,0 +1,68 @@
+.wrapper {
+  
+}
+
+.heading {
+  @apply bg-[#58B19F] text-white font-semibold mb-4 mx-4 px-4 py-2 rounded-lg;
+}
+
+.heading span {
+}
+
+.heading small {
+  @apply block font-normal leading-4 text-xs;
+}
+
+.specs {
+  @apply px-4 text-xs;
+}
+
+.specs :global(.group:not(:last-child)) {
+  @apply mb-4;
+}
+
+.specs :global(.group) {
+  @apply bg-purple-50 border border-purple-200 rounded-lg;
+}
+
+.specs :global(.group .group-name) {
+  @apply text-purple-500 font-semibold px-4 py-2 text-base;
+}
+
+.specs :global(.group .group-name span) {
+  @apply hidden;
+}
+
+.specs :global(.group .row) {
+  @apply border-t border-purple-100 flex gap-4 py-2;
+}
+
+.specs :global(.group .row:first-child) {
+  @apply border-t-0;
+}
+
+.specs :global(.group .row .attr-name) {
+  @apply pr-4;
+  color: #82589F;
+  max-width: 30vw;
+  min-width: 30vw;
+}
+
+.specs :global(.group .row .attr-name strong) {
+  @apply font-medium;
+}
+
+.specs :global(.group .row .attr-value) {
+  color: #182C61;
+  @apply flex gap-8 pl-4;
+}
+
+.specs :global(.group .row .attr-value .no) {
+  @apply scale-125;
+  color: #FD7272;
+}
+
+.specs :global(.group .row .attr-value .yes) {
+  @apply relative scale-125 top-1;
+  color: #2ed573;
+}
