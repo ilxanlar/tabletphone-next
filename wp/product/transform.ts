@@ -1,21 +1,27 @@
 import keyBy from 'lodash/keyBy';
 import ProductType from './types';
+import getProductLink from '@/utils/product/getProductLink';
 
 export default function transform(data: any): ProductType {
   const metadata = keyBy(data.meta_data, 'key')
 
   const altSlug = metadata._second_slug?.value
   const altName = metadata._second_title?.value
+  const link = getProductLink({
+    slug: data.slug,
+    altSlug
+  })
   const addons = getAddons(metadata._product_addons_v5?.value)
   const images = getImages(data.images || []);
-  const specs = getSpecs(metadata._specs?.value ?? '', altName);
+  const specs = getSpecs(metadata._specs?.value ?? '', altName, link);
   const reviewUrl = metadata._review_url?.value
-  const reviewUrlLabel = metadata._review_title?.value
+  const reviewUrlLabel = metadata._review_url_title?.value
 
   return {
     addons,
     altName,
     altSlug,
+    averageRating: data.average_rating,
     categories: data.categories,
     description: data.description,
     id: data.id,
@@ -24,6 +30,7 @@ export default function transform(data: any): ProductType {
     permalink: data.permalink,
     price: data.price,
     priceHtml: data.price_html,
+    ratingCount: data.rating_count,
     regularPrice: data.regularPrice,
     reviewUrl,
     reviewUrlLabel,
@@ -31,6 +38,7 @@ export default function transform(data: any): ProductType {
     shortDescription: data.short_description,
     slug: data.slug,
     specs,
+    stockStatus: data.stock_status,
     tags: data.tags,
   }
 }
@@ -102,9 +110,10 @@ function getImages(images: Array<{
   }));
 }
 
-function getSpecs(text: string, altName: string) {
+function getSpecs(text: string, altName: string, link: string) {
   return text
     .replaceAll('%productname%', `<span>${altName}</span>`)
+    .replaceAll('%productlink%', link)
     .replaceAll('%booltrue%', '<span class="yes">✓</span>')
     .replaceAll('%boolfalse%', '<span class="no">𐄂</span>');
 }

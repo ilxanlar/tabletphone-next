@@ -14,11 +14,18 @@ export type AddonsType = {
   [key: string]: AddonType
 }
 
+export type Category = {
+  id: number,
+  name: string,
+  slug: string
+}
+
 type ProductType = {
   addons: AddonsType,
   altName: string,
   altSlug: string,
-  categories: [],
+  averageRating: string,
+  categories: Category[],
   description: string,
   id: number,
   images: Array<{
@@ -30,6 +37,7 @@ type ProductType = {
   permalink: string,
   price: string,
   priceHtml: string,
+  ratingCount: number,
   regularPrice: string,
   reviewUrl: string,
   reviewUrlLabel: string,
@@ -37,6 +45,7 @@ type ProductType = {
   shortDescription?: string,
   slug: string,
   specs?: string,
+  stockStatus: 'instock' | 'outofstock',
   tags: [],
 }
 
