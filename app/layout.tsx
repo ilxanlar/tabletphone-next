@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import '@/public/fonts/yekan-bakh/fontiran.css'
 import '@/app/globals.css'
+import HomeSVG from '@/icons/home.svg'
+import HomeFilledSVG from '@/icons/home-filled.svg'
+import GridViewSVG from '@/icons/grid-view.svg'
+import SearchSVG from '@/icons/search.svg'
+import ShoppingBagSVG from '@/icons/shopping-bag.svg'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,30 +20,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="bg-gray-200 h-16 sticky top-0">
-
-        </header>
-
-        <main className="min-h-[calc(100dvh-8rem)]">
+        <main className="min-h-[calc(100dvh-4rem)]">
           {children}
         </main>
 
-        <footer className="bg-white border-t sticky bottom-0">
-          <nav className="grid grid-cols-5 gap-2 text-center">
-            <a className="px-0 py-4">
-              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
+        <footer className="bg-white border-t sticky bottom-0 z-40">
+          <nav className="flex gap-0 text-center">
+            <a className="flex flex-col px-0 py-2 flex-grow pr-2 text-purple-500">
+              <HomeFilledSVG className="fill-current h-6 w-6 mx-auto" />
+              <span className="leading-4 text-xs opacity-70">خانه</span>
             </a>
-            <a className="px-0 py-4">
-              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
+            <a className="flex flex-col px-0 py-2 flex-grow">
+              <GridViewSVG className="fill-current h-6 w-6 mx-auto" />
+              <span className="leading-4 text-xs opacity-70">دسته‌بندی</span>
             </a>
-            <a className="px-0 py-4">
-              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
+            <a className="flex flex-col px-0 py-2 flex-grow">
+              <SearchSVG className="fill-current h-6 w-6 mx-auto" />
+              <span className="leading-4 text-xs opacity-70">جستجو</span>
             </a>
-            <a className="px-0 py-4">
-              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
-            </a>
-            <a className="px-0 py-4">
-              <span className="bg-gray-400 h-8 w-8 block rounded-full mx-auto">&nbsp;</span>
+            <a className="flex flex-col px-0 py-2 flex-grow pl-2">
+              <ShoppingBagSVG className="fill-current h-6 w-6 mx-auto" />
+              <span className="leading-4 text-xs opacity-70">سبد خرید</span>
             </a>
           </nav>
         </footer>
