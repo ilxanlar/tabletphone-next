@@ -1,9 +1,9 @@
 .wrapper {
-  @apply bg-white p-8 rounded-xl;
+  @apply bg-white mb-4 shadow-lg;
 }
 
 .heading {
-  @apply mb-8 text-xl;
+  @apply bg-white border-b border-dashed px-4 py-4 text-lg sticky top-0 z-10;
 }
 
 .heading span {
@@ -13,7 +13,9 @@
   @apply block leading-4 text-gray-400;
 }
 
-.content {}
+.content {
+  @apply p-4;
+}
 
 .content p {
   @apply my-4;

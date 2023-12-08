@@ -1,20 +1,20 @@
 .wrapper {
-  
+  @apply bg-white mb-4 shadow-lg;
 }
 
 .heading {
-  @apply bg-[#58B19F] text-white font-semibold mb-4 mx-4 px-4 py-2 rounded-lg;
+  @apply bg-white border-b border-dashed px-4 py-4 text-lg sticky top-0 z-10;
 }
 
 .heading span {
 }
 
 .heading small {
-  @apply block font-normal leading-4 text-xs;
+  @apply block leading-4 text-gray-400;
 }
 
 .specs {
-  @apply px-4 text-xs;
+  @apply pb-8 px-4 text-sm;
 }
 
 .specs :global(.group:not(:last-child)) {
@@ -22,11 +22,11 @@
 }
 
 .specs :global(.group) {
-  @apply bg-purple-50 border border-purple-200 rounded-lg;
+  /* @apply bg-purple-50 border border-purple-200 rounded-lg; */
 }
 
 .specs :global(.group .group-name) {
-  @apply text-purple-500 font-semibold px-4 py-2 text-base;
+  @apply text-purple-500 font-semibold py-2 text-base;
 }
 
 .specs :global(.group .group-name span) {
@@ -42,7 +42,6 @@
 }
 
 .specs :global(.group .row .attr-name) {
-  @apply pr-4;
   color: #82589F;
   max-width: 30vw;
   min-width: 30vw;
@@ -54,7 +53,7 @@
 
 .specs :global(.group .row .attr-value) {
   color: #182C61;
-  @apply flex gap-8 pl-4;
+  @apply flex gap-8;
 }
 
 .specs :global(.group .row .attr-value .no) {
@@ -63,6 +62,6 @@
 }
 
 .specs :global(.group .row .attr-value .yes) {
-  @apply relative scale-125 top-1;
+  @apply scale-125;
   color: #2ed573;
 }

@@ -29,8 +29,18 @@ export default function AddToCart(props: Props) {
     }))
   };
 
+  if (product.stockStatus === 'outofstock') {
+    return (
+      <div className="bg-white sticky bottom-16 p-4 pt-0">
+        <p className="bg-red-100 text-red-600 px-4 py-3 rounded-3xl text-center">
+          محصول ناموجود است
+        </p>
+      </div>
+    )
+  }
+
   return (
-    <div className="sticky bottom-16 bg-white border border-b-0 p-4 mx-4 rounded-tl-xl rounded-tr-xl shadow-[0_0_1rem_#00000030]">
+    <div className="bg-white sticky bottom-16 p-4 pt-0">
       <div>
         {addons.length > 0 && (
           <div>

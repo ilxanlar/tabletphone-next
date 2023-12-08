@@ -55,8 +55,8 @@ export default function SelectAddon(props: Props) {
   return (
     <div className="bg-purple-50 mb-4 relative rounded-3xl">
       <button className="flex gap-4 items-center justify-between px-4 py-3 rounded-3xl w-full" onClick={handleClick} ref={buttonRef}>
-        <span className="text-right text-gray-500">{addon.label}: </span>
-        <span className="font-semibold text-left text-violet-500">{selected.label}</span>
+        <span className="max-w-[50%] text-right text-gray-500">{addon.label}: </span>
+        <span className="max-w-[50%] font-semibold text-left text-violet-500">{selected.label}</span>
       </button>
       <div className={optionsWrapperClassName} ref={optionsRef}>
         <h4 className="opacity-50 px-6 py-2 text-sm">
