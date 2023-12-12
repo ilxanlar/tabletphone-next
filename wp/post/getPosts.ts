@@ -14,7 +14,7 @@ export default async function getPosts(
   params: ParamsType = {}
 ): Promise<GetPostsType> {
   const queries = decodeURIComponent(qs.stringify(params));
-  const url = `https://tabletphone.ir/wp-json/wp/v2/posts?${queries}`;
+  const url = `https://tabletphone.ir/wp-json/wp/v2/posts? _embed&${queries}`;
 
   try {
     const response = await fetch(url);

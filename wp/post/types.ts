@@ -4,12 +4,13 @@ export type PostType = {
   title: string;
   content: string;
   header: string; // ???
+  link: string;
   date: string; // ISO8601 compliant date
   date_gmt?: string; // ISO8601 compliant date
   status: "publish" | "future" | "draft" | "pending" | "private";
   categories: number[];
+  featureImage: string; //??
   excerpt?: string;
-  link?: string;
   modified?: string; // ISO8601 compliant date
   modified_gmt?: string; // ISO8601 compliant date
   authorId?: number; // Author ID

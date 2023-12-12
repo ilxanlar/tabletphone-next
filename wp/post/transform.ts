@@ -10,6 +10,7 @@ export default function transform(data: any): PostType {
     date: data.date,
     status: data.status,
     categories: data.categories,
+    featureImage: data._embedded["wp:featuredmedia"]["0"].source_url,
     link: data?.link,
     excerpt: data.excerpt?.rendered,
     modified: data?.modified,

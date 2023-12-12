@@ -11,10 +11,13 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.14.202",
+    "@types/qs": "^6.9.10",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "classnames": "^2.3.2",
+    "html-react-parser": "^5.0.7",
     "lodash": "^4.17.21",
     "next": "14.0.3",
+    "qs": "^6.11.2",
     "react": "^18",
     "react-dom": "^18"
   },

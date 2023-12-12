@@ -1,6 +1,9 @@
-import getCategories from "@/wp/category/getCaregories";
+import getCategories from "@/wp/category/getCategories";
+import GetCategoryBySlug from "@/wp/category/getCategoryBySlug";
+import wp from "@/wp";
 import getPosts from "@/wp/post/getPosts"
 import { notFound } from "next/navigation"
+import PostsList from "@/components/posts-list";
 
 
 type Props = {
@@ -8,17 +11,22 @@ type Props = {
         slugs: string[]
     }
 }
-export default async function ReviewsPage(props: Props) {
+export default async function CategoryPage(props: Props) {
     const { params: { slugs } } = props
-    const categorySlug = slugs[slugs.length - 1]
-    const { data: categoryData } = await getCategories({ slug: [categorySlug] })
-    const { data: posts, meta, status } = await getPosts({ categories: [getCategories[0]id] });
-    console.log("res", posts)
-
+    const slug = slugs[slugs.length - 1]
+    const { data: categoryData } = await GetCategoryBySlug(slug)
+    if (!categoryData) {
+        return notFound()
+    }
+    const { data: posts, meta, status } = await getPosts({ categories: [categoryData?.id] });
     if (!posts) {
         return notFound()
     }
-    return (<>
-        this is a test page
-    </>)
+    console.log(posts)
+    return (
+        <section>
+            <h2>{categoryData.name}</h2>
+            <PostsList posts={posts} />
+        </section >)
+
 }
