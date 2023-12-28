@@ -1,0 +1,16 @@
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+<url>
+    <loc>https://example.com/aboutus</loc>
+    <lastmod>2023-07-11T04:30:08+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>monthly</changefreq>
+
+</url>
+<url>
+    <loc>https://example.com/faq</loc>
+    <lastmod>2023-07-11T04:30:18+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+
+</url>
+</urlset>

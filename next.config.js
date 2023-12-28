@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: true,
+   images: {
+    domains: ['tabletphone.ir']
+  },
   webpack(config) {
+    
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
@@ -27,6 +32,7 @@ const nextConfig = {
 
     return config
   },
+  
 }
 
 module.exports = nextConfig

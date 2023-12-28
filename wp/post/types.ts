@@ -10,7 +10,7 @@ export type PostType = {
   status: "publish" | "future" | "draft" | "pending" | "private";
   categories: number[];
   featureImage: string; //??
-  excerpt?: string;
+  excerpt: string; //???
   modified?: string; // ISO8601 compliant date
   modified_gmt?: string; // ISO8601 compliant date
   authorId?: number; // Author ID

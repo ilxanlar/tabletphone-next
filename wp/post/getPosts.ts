@@ -1,5 +1,4 @@
 import transform from "./transform";
-import { PostType } from "./types";
 import { GetPostsType } from "./types";
 import * as qs from "qs";
 

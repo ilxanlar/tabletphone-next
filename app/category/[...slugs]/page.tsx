@@ -22,7 +22,6 @@ export default async function CategoryPage(props: Props) {
     if (!posts) {
         return notFound()
     }
-    console.log(posts)
     return (
         <section>
             <h2>{categoryData.name}</h2>

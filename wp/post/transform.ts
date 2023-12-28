@@ -1,4 +1,4 @@
-import PostType from "./types";
+import { PostType } from "./types";
 
 export default function transform(data: any): PostType {
   return {

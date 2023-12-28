@@ -11,7 +11,7 @@ export type CategoryType = {
   meta?: [];
 };
 
-export type GetCatroriesType = {
+export type GetCategoriesType = {
   data: Array<CategoryType>;
   message?: string;
   meta?: {
