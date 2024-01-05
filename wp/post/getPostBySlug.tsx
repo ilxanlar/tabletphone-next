@@ -6,7 +6,6 @@ type GetPostBySlugType = {
     status: number;
 };
 export default async function GetPostBySlug(slug: string): Promise<GetPostBySlugType> {
-    const { data: posts } = await getPosts({ slug });
 
     try {
         const response = await getPosts({

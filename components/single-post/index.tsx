@@ -1,5 +1,6 @@
 import { PostType } from "@/wp/post/types";
 import Image from "next/image";
+import Comments from "../comments-list";
 export default function SinglePost({ post }: { post: PostType }) {
 
     return <>
