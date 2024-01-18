@@ -38,13 +38,15 @@ export default async function PageOrPostPage({ params: { slug } }: { params: { s
     }
     if (result?.type == "post") {
         const post = result as PostType
-        return
-        <>
-            <SinglePost post={post} />
-            {/* <CommentForm /> */}
-            <CommentsList comments={comments} />
+        return (
+            <>
+                <SinglePost post={post} />
+                {/* <CommentForm /> */}
+                <CommentsList comments={comments} />
 
-        </>
+            </>
+        )
+
     }
 
 

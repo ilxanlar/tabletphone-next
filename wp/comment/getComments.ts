@@ -11,7 +11,8 @@ export default async function getComments(
   params: ParamsType = {}
 ): Promise<GetComments> {
   const queries = decodeURIComponent(qs.stringify(params));
-  const url = process.env.WP_BASE_URL || "";
+  const url =
+    process.env.WP_BASE_URL || "https://tabletphone.ir/wp-json/wp/v2/";
   console.log("queries", url + "comments&" + queries);
   try {
     const response = await fetch(url + "comments?" + queries);
